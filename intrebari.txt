@@ -117,3 +117,10 @@ dnsa?
 1
 OOP
 ##
+dșslma?
+1)lndsa
+2)kdnsa
+3)kjndsa
+3
+OOP
+##

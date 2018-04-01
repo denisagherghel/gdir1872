@@ -26,26 +26,27 @@ public class Repository {
 			throw new DuplicateIntrebareException("Intrebarea deja exista!");
 		intrebari.add(i);
 
-		BufferedWriter bw = null;
-		try {
-			bw = new BufferedWriter(new FileWriter(fileName, true));
-			bw.append(i.getEnunt()+"\n");
-			bw.append(i.getVarianta1()+"\n");
-			bw.append(i.getVarianta2()+"\n");
-			bw.append(i.getVarianta3()+"\n");
-			bw.append(i.getVariantaCorecta()+"\n");
-			bw.append(i.getDomeniu().toString()+"\n");
-			bw.append("##"+"\n");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		finally{
-			try {
-				bw.close();
-			} catch (IOException e) {
-				// TODO: handle exception
-			}
-		}
+		if(fileName!=null) {
+            BufferedWriter bw = null;
+            try {
+                bw = new BufferedWriter(new FileWriter(fileName, true));
+                bw.append(i.getEnunt() + "\n");
+                bw.append(i.getVarianta1() + "\n");
+                bw.append(i.getVarianta2() + "\n");
+                bw.append(i.getVarianta3() + "\n");
+                bw.append(i.getVariantaCorecta() + "\n");
+                bw.append(i.getDomeniu().toString() + "\n");
+                bw.append("##" + "\n");
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    bw.close();
+                } catch (IOException e) {
+                    // TODO: handle exception
+                }
+            }
+        }
 	}
 	
 	public boolean exists(Intrebare i){

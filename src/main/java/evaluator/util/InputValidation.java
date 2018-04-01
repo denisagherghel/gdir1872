@@ -10,8 +10,8 @@ public class InputValidation {
 	
 		enunt = enunt.trim();
 		
-		if(enunt.equals(""))
-			throw new InputValidationFailedException("Enuntul este vid!");
+		if(enunt.equals("") || enunt.length()<5)
+			throw new InputValidationFailedException("Enuntul nu are lungimea necesara!");
 		if(!String.valueOf(enunt.charAt(enunt.length()-1)).equals("?"))
 			throw new InputValidationFailedException("Ultimul caracter din enunt nu e '?'!");
 		if(enunt.length() > 100)
@@ -23,8 +23,8 @@ public class InputValidation {
 		
 		varianta1 = varianta1.trim();
 		
-		if(varianta1.equals(""))
-			throw new InputValidationFailedException("Varianta1 este vida!");
+		if(varianta1.equals("") || varianta1.length()<3)
+			throw new InputValidationFailedException("Varianta1 nu are lungimea necesara!");
 		if(!String.valueOf(varianta1.charAt(0)).equals("1") || !String.valueOf(varianta1.charAt(1)).equals(")"))
 			throw new InputValidationFailedException("Varianta1 nu incepe cu '1)'!");
 		if(varianta1.length() > 50)
@@ -35,8 +35,8 @@ public class InputValidation {
 		
 		varianta2 = varianta2.trim();
 		
-		if(varianta2.equals(""))
-			throw new InputValidationFailedException("Varianta2 este vida!");
+		if(varianta2.equals("") || varianta2.length()<3)
+			throw new InputValidationFailedException("Varianta2 nu are lungimea necesara!");
 		if(!String.valueOf(varianta2.charAt(0)).equals("2") || !String.valueOf(varianta2.charAt(1)).equals(")"))
 			throw new InputValidationFailedException("Varianta2 nu incepe cu '2)'!");
 		if(varianta2.length() > 50)
@@ -47,8 +47,8 @@ public class InputValidation {
 		
 		varianta3 = varianta3.trim();
 		
-		if(varianta3.equals(""))
-			throw new InputValidationFailedException("Varianta3 este vida!");
+		if(varianta3.equals("") || varianta3.length()<3)
+			throw new InputValidationFailedException("Varianta3 nu are lungimea necesara!");
 		if(!String.valueOf(varianta3.charAt(0)).equals("3") || !String.valueOf(varianta3.charAt(1)).equals(")"))
 			throw new InputValidationFailedException("Varianta3 nu incepe cu '3)'!");
 		if(varianta3.length() > 50)
@@ -65,7 +65,13 @@ public class InputValidation {
 	}
 	
 	public static void validateDomeniu(String domeniu) throws InputValidationFailedException{
-		if(Domeniu.valueOf(domeniu) == null)
+//		BEFORE DEBUGGING
+//		if(Domeniu.valueOf(domeniu) == null)
+//			throw new InputValidationFailedException("Nu exista domeniul introdus");
+		try {
+			Domeniu.valueOf(domeniu);
+		} catch (Exception e) {
 			throw new InputValidationFailedException("Nu exista domeniul introdus");
+		}
 	}
 }

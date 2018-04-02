@@ -29,7 +29,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare1() {
+    public void addNewIntrebare_validInput() {
         try {
             Intrebare i = null;
             i = appController.addNewIntrebare(enunt, varianta1,varianta2,varianta3,variantaCorecta,domeniu);
@@ -42,7 +42,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare2() {
+    public void addNewIntrebare_invalidFormatForEnunt() {
         try {
             Intrebare i = null;
             enunt = "Ce este oop";
@@ -57,7 +57,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare3() {
+    public void addNewIntrebare_invalidFormatForVarianta1() {
         try {
             Intrebare i = null;
             varianta1 = "x)dlja";
@@ -72,7 +72,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare4() {
+    public void addNewIntrebare_invalidStringForVariantaCorecta() {
         try {
             Intrebare i = null;
             variantaCorecta = "10";
@@ -87,7 +87,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare5() {
+    public void addNewIntrebare_invalidDomeniu() {
         try {
             Intrebare i = null;
             domeniu = "OOPS";
@@ -102,7 +102,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare6() {
+    public void addNewIntrebare_BVA_minAcceptedValueForVarianta1() {
         try {
             Intrebare i = null;
             varianta1 = "1)a";
@@ -115,7 +115,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare7() {
+    public void addNewIntrebare_BVA_minNotAcceptedValueForVarianta1() {
         try {
             Intrebare i = null;
             varianta1 = "1)";
@@ -130,7 +130,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare8() {
+    public void addNewIntrebare_BVA_minPlusOneAcceptedValueForVarianta1() {
         try {
             Intrebare i = null;
             varianta1 = "1)ab";
@@ -143,7 +143,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare9() {
+    public void addNewIntrebare_tooLongEnunt() {
         try {
             Intrebare i = null;
             enunt = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare, ex tristique tempus fringilla, lorem ipsum amet?";
@@ -158,7 +158,7 @@ public class AppControllerTest {
     }
 
     @Test
-    public void addNewIntrebare10() {
+    public void addNewIntrebare_tooLongVarianta1() {
         try {
             Intrebare i = null;
             varianta1 = "1)Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare, ex tristique tempus fringilla, lorem ipsum amet?";

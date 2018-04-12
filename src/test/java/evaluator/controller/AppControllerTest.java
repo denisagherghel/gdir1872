@@ -171,4 +171,8 @@ public class AppControllerTest {
                     e.getMessage().compareTo("Lungimea variantei1 depaseste 50 de caractere!") == 0);
         }
     }
+
+    @Test
+    public void createNewTest() {
+    }
 }

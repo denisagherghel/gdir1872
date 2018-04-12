@@ -3,7 +3,6 @@ package evaluator.controller;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -38,7 +37,6 @@ public class AppController {
 	}
 	
 	public Test createNewTest() throws NotAbleToCreateTestException{
-		
 		if(repository.getIntrebari().size() < 5)
 			throw new NotAbleToCreateTestException("Nu exista suficiente intrebari pentru crearea unui test!(5)");
 		
@@ -49,20 +47,20 @@ public class AppController {
 		List<Domeniu> domenii = new LinkedList<Domeniu>();
 		Intrebare intrebare;
 		Test test = new Test();
-		
 		while(testIntrebari.size() != 5){
 			intrebare = repository.pickRandomIntrebare();
-			
 			if(!domenii.contains(intrebare.getDomeniu())){
 				testIntrebari.add(intrebare);
 				domenii.add(intrebare.getDomeniu());
 			}
-			
 		}
-		
 		test.setIntrebari(testIntrebari);
 		test.setId(System.currentTimeMillis());
+		saveToFile(testIntrebari, test);
+		return test;
+	}
 
+	private void saveToFile(List<Intrebare> testIntrebari, Test test) {
 		BufferedWriter bw = null;
 		try {
 			bw = new BufferedWriter(new FileWriter("test-"+test.getId()));
@@ -87,11 +85,8 @@ public class AppController {
 				// TODO: handle exception
 			}
 		}
-
-		return test;
-		
 	}
-	
+
 	public void loadIntrebariFromFile(String f) throws InputValidationFailedException {
 		repository.setIntrebari(repository.loadIntrebariFromFile(f));
 	}

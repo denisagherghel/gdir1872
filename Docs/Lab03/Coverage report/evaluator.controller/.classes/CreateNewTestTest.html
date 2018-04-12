@@ -1,0 +1,173 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CreateNewTestTest</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">evaluator.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CreateNewTestTest (evaluator.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CreateNewTestTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/ 6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    67.3%
+  </span>
+  <span class="absValue">
+    (33/ 49)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package evaluator.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import evaluator.exception.DuplicateIntrebareException;
+<i>4</i>&nbsp;import evaluator.exception.InputValidationFailedException;
+<i>5</i>&nbsp;import evaluator.exception.NotAbleToCreateTestException;
+<i>6</i>&nbsp;import evaluator.model.Intrebare;
+<i>7</i>&nbsp;import org.junit.Before;
+<i>8</i>&nbsp;import org.junit.Test;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;import static org.junit.Assert.assertTrue;
+<i>11</i>&nbsp;import static org.junit.Assert.fail;
+<i>12</i>&nbsp;
+<b class="fc"><i>13</i>&nbsp;public class CreateNewTestTest {</b>
+<b class="fc"><i>14</i>&nbsp;    AppController appController = new AppController();</b>
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;    @Before
+<i>17</i>&nbsp;    public void setUp() {
+<i>18</i>&nbsp;
+<b class="fc"><i>19</i>&nbsp;    }</b>
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;    @Test
+<i>22</i>&nbsp;    public void createNewTest_notEnoughIntrebari() {
+<i>23</i>&nbsp;        try {
+<b class="fc"><i>24</i>&nbsp;            appController.loadIntrebariFromFile(&quot;intrebari_tc_01.txt&quot;);</b>
+<b class="nc"><i>25</i>&nbsp;        } catch (InputValidationFailedException e) {</b>
+<b class="nc"><i>26</i>&nbsp;            System.out.println(e.getMessage());</b>
+<b class="fc"><i>27</i>&nbsp;        }</b>
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;        try {
+<b class="fc"><i>30</i>&nbsp;            evaluator.model.Test t = null;</b>
+<b class="fc"><i>31</i>&nbsp;            t = appController.createNewTest();</b>
+<b class="nc"><i>32</i>&nbsp;            assertTrue(&quot;Method created test for invalid data!&quot;, t==null);</b>
+<b class="fc"><i>33</i>&nbsp;        } catch (NotAbleToCreateTestException e) {</b>
+<b class="fc"><i>34</i>&nbsp;            assertTrue(&quot;Got incorrect error message&quot;,</b>
+<b class="fc"><i>35</i>&nbsp;                    e.getMessage().compareTo(&quot;Nu exista suficiente intrebari pentru crearea unui test!(5)&quot;) == 0);</b>
+<b class="nc"><i>36</i>&nbsp;        }</b>
+<b class="fc"><i>37</i>&nbsp;    }</b>
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;    @Test
+<i>40</i>&nbsp;    public void createNewTest_notEnoughDomenii() {
+<i>41</i>&nbsp;        try {
+<b class="fc"><i>42</i>&nbsp;            appController.loadIntrebariFromFile(&quot;intrebari_tc_02.txt&quot;);</b>
+<b class="nc"><i>43</i>&nbsp;        } catch (InputValidationFailedException e) {</b>
+<b class="nc"><i>44</i>&nbsp;            System.out.println(e.getMessage());</b>
+<b class="fc"><i>45</i>&nbsp;        }</b>
+<i>46</i>&nbsp;
+<i>47</i>&nbsp;        try {
+<b class="fc"><i>48</i>&nbsp;            evaluator.model.Test t = null;</b>
+<b class="fc"><i>49</i>&nbsp;            t = appController.createNewTest();</b>
+<b class="nc"><i>50</i>&nbsp;            assertTrue(&quot;Method created test for invalid data!&quot;, t==null);</b>
+<b class="fc"><i>51</i>&nbsp;        } catch (NotAbleToCreateTestException e) {</b>
+<b class="fc"><i>52</i>&nbsp;            assertTrue(&quot;Got incorrect error message&quot;,</b>
+<b class="fc"><i>53</i>&nbsp;                    e.getMessage().compareTo(&quot;Nu exista suficiente domenii cu intrebari pentru crearea unui test!(5)&quot;) == 0);</b>
+<b class="nc"><i>54</i>&nbsp;        }</b>
+<b class="fc"><i>55</i>&nbsp;    }</b>
+<i>56</i>&nbsp;
+<i>57</i>&nbsp;    @Test
+<i>58</i>&nbsp;    public void createNewTest_validInput1() {
+<i>59</i>&nbsp;        try {
+<b class="fc"><i>60</i>&nbsp;            appController.loadIntrebariFromFile(&quot;intrebari_tc_03.txt&quot;);</b>
+<b class="nc"><i>61</i>&nbsp;        } catch (InputValidationFailedException e) {</b>
+<b class="nc"><i>62</i>&nbsp;            System.out.println(e.getMessage());</b>
+<b class="fc"><i>63</i>&nbsp;        }</b>
+<i>64</i>&nbsp;
+<i>65</i>&nbsp;        try {
+<b class="fc"><i>66</i>&nbsp;            evaluator.model.Test t = null;</b>
+<b class="fc"><i>67</i>&nbsp;            t = appController.createNewTest();</b>
+<b class="fc"><i>68</i>&nbsp;            assertTrue(&quot;Method did not create test for valid data!&quot;, t!=null);</b>
+<b class="nc"><i>69</i>&nbsp;        } catch (NotAbleToCreateTestException e) {</b>
+<b class="nc"><i>70</i>&nbsp;            fail(&quot;Got NotAbleToCreateTestException for valid input!&quot;);</b>
+<b class="fc"><i>71</i>&nbsp;        }</b>
+<b class="fc"><i>72</i>&nbsp;    }</b>
+<i>73</i>&nbsp;
+<i>74</i>&nbsp;    @Test
+<i>75</i>&nbsp;    public void createNewTest_validInput2() {
+<i>76</i>&nbsp;        try {
+<b class="fc"><i>77</i>&nbsp;            appController.loadIntrebariFromFile(&quot;intrebari_tc_04.txt&quot;);</b>
+<b class="nc"><i>78</i>&nbsp;        } catch (InputValidationFailedException e) {</b>
+<b class="nc"><i>79</i>&nbsp;            System.out.println(e.getMessage());</b>
+<b class="fc"><i>80</i>&nbsp;        }</b>
+<i>81</i>&nbsp;
+<i>82</i>&nbsp;        try {
+<b class="fc"><i>83</i>&nbsp;            evaluator.model.Test t = null;</b>
+<b class="fc"><i>84</i>&nbsp;            t = appController.createNewTest();</b>
+<b class="fc"><i>85</i>&nbsp;            assertTrue(&quot;Method did not create test for valid data!&quot;, t!=null);</b>
+<b class="nc"><i>86</i>&nbsp;        } catch (NotAbleToCreateTestException e) {</b>
+<b class="nc"><i>87</i>&nbsp;            fail(&quot;Got NotAbleToCreateTestException for valid input!&quot;);</b>
+<b class="fc"><i>88</i>&nbsp;        }</b>
+<b class="fc"><i>89</i>&nbsp;    }</b>
+<i>90</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-04-12 14:37</div>
+</div>
+</body>
+</html>

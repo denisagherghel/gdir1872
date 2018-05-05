@@ -1,0 +1,190 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: AppController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">evaluator.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: AppController (evaluator.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AppController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    71.4%
+  </span>
+  <span class="absValue">
+    (5/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    75%
+  </span>
+  <span class="absValue">
+    (39/ 52)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package evaluator.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.io.BufferedWriter;
+<i>4</i>&nbsp;import java.io.FileWriter;
+<i>5</i>&nbsp;import java.io.IOException;
+<i>6</i>&nbsp;import java.util.LinkedList;
+<i>7</i>&nbsp;import java.util.List;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import evaluator.exception.InputValidationFailedException;
+<i>10</i>&nbsp;import evaluator.model.Domeniu;
+<i>11</i>&nbsp;import evaluator.model.Intrebare;
+<i>12</i>&nbsp;import evaluator.model.Statistica;
+<i>13</i>&nbsp;import evaluator.model.Test;
+<i>14</i>&nbsp;import evaluator.repository.Repository;
+<i>15</i>&nbsp;import evaluator.exception.DuplicateIntrebareException;
+<i>16</i>&nbsp;import evaluator.exception.NotAbleToCreateStatisticsException;
+<i>17</i>&nbsp;import evaluator.exception.NotAbleToCreateTestException;
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;public class AppController {
+<i>20</i>&nbsp;	
+<i>21</i>&nbsp;	private Repository repository;
+<i>22</i>&nbsp;	
+<b class="fc"><i>23</i>&nbsp;	public AppController() {</b>
+<b class="fc"><i>24</i>&nbsp;		repository = new Repository();</b>
+<b class="fc"><i>25</i>&nbsp;	}</b>
+<i>26</i>&nbsp;	
+<i>27</i>&nbsp;	public Intrebare addNewIntrebare(String enunt, String varianta1, String varianta2, String varianta3,
+<i>28</i>&nbsp;									 String variantaCorecta, String domeniu) throws DuplicateIntrebareException, InputValidationFailedException {
+<b class="fc"><i>29</i>&nbsp;		Intrebare intrebare = new Intrebare(enunt, varianta1, varianta2, varianta3, variantaCorecta, domeniu);</b>
+<b class="fc"><i>30</i>&nbsp;		repository.addIntrebare(intrebare);</b>
+<i>31</i>&nbsp;
+<b class="fc"><i>32</i>&nbsp;		return intrebare;</b>
+<i>33</i>&nbsp;	}
+<i>34</i>&nbsp;	
+<i>35</i>&nbsp;	public boolean exists(Intrebare intrebare){
+<b class="nc"><i>36</i>&nbsp;		return repository.exists(intrebare);</b>
+<i>37</i>&nbsp;	}
+<i>38</i>&nbsp;	
+<i>39</i>&nbsp;	public Test createNewTest() throws NotAbleToCreateTestException{
+<b class="fc"><i>40</i>&nbsp;		if(repository.getIntrebari().size() &lt; 5)</b>
+<b class="fc"><i>41</i>&nbsp;			throw new NotAbleToCreateTestException(&quot;Nu exista suficiente intrebari pentru crearea unui test!(5)&quot;);</b>
+<i>42</i>&nbsp;		
+<b class="fc"><i>43</i>&nbsp;		if(repository.getNumberOfDistinctDomains() &lt; 5)</b>
+<b class="fc"><i>44</i>&nbsp;			throw new NotAbleToCreateTestException(&quot;Nu exista suficiente domenii cu intrebari pentru crearea unui test!(5)&quot;);</b>
+<i>45</i>&nbsp;		
+<b class="fc"><i>46</i>&nbsp;		List&lt;Intrebare&gt; testIntrebari = new LinkedList&lt;Intrebare&gt;();</b>
+<b class="fc"><i>47</i>&nbsp;		List&lt;Domeniu&gt; domenii = new LinkedList&lt;Domeniu&gt;();</b>
+<i>48</i>&nbsp;		Intrebare intrebare;
+<b class="fc"><i>49</i>&nbsp;		Test test = new Test();</b>
+<b class="fc"><i>50</i>&nbsp;		while(testIntrebari.size() != 5){</b>
+<b class="fc"><i>51</i>&nbsp;			intrebare = repository.pickRandomIntrebare();</b>
+<b class="fc"><i>52</i>&nbsp;			if(!domenii.contains(intrebare.getDomeniu())){</b>
+<b class="fc"><i>53</i>&nbsp;				testIntrebari.add(intrebare);</b>
+<b class="fc"><i>54</i>&nbsp;				domenii.add(intrebare.getDomeniu());</b>
+<i>55</i>&nbsp;			}
+<i>56</i>&nbsp;		}
+<b class="fc"><i>57</i>&nbsp;		test.setIntrebari(testIntrebari);</b>
+<b class="fc"><i>58</i>&nbsp;		test.setId(System.currentTimeMillis());</b>
+<b class="fc"><i>59</i>&nbsp;		saveToFile(testIntrebari, test);</b>
+<b class="fc"><i>60</i>&nbsp;		return test;</b>
+<i>61</i>&nbsp;	}
+<i>62</i>&nbsp;
+<i>63</i>&nbsp;	private void saveToFile(List&lt;Intrebare&gt; testIntrebari, Test test) {
+<b class="fc"><i>64</i>&nbsp;		BufferedWriter bw = null;</b>
+<i>65</i>&nbsp;		try {
+<b class="fc"><i>66</i>&nbsp;			bw = new BufferedWriter(new FileWriter(&quot;test-&quot;+test.getId()));</b>
+<b class="fc"><i>67</i>&nbsp;			bw.append(test.getId().toString()+&quot;\n&quot;);</b>
+<b class="fc"><i>68</i>&nbsp;			for(int nrIntrebare=0; nrIntrebare&lt;5; nrIntrebare++) {</b>
+<b class="fc"><i>69</i>&nbsp;				Intrebare intrebareDeSalvat = testIntrebari.get(nrIntrebare);</b>
+<b class="fc"><i>70</i>&nbsp;				bw.append(intrebareDeSalvat.getEnunt() + &quot;\n&quot;);</b>
+<b class="fc"><i>71</i>&nbsp;				bw.append(intrebareDeSalvat.getVarianta1() + &quot;\n&quot;);</b>
+<b class="fc"><i>72</i>&nbsp;				bw.append(intrebareDeSalvat.getVarianta2() + &quot;\n&quot;);</b>
+<b class="fc"><i>73</i>&nbsp;				bw.append(intrebareDeSalvat.getVarianta3() + &quot;\n&quot;);</b>
+<b class="fc"><i>74</i>&nbsp;				bw.append(intrebareDeSalvat.getVariantaCorecta() + &quot;\n&quot;);</b>
+<b class="fc"><i>75</i>&nbsp;				bw.append(intrebareDeSalvat.getDomeniu().toString() + &quot;\n&quot;);</b>
+<b class="fc"><i>76</i>&nbsp;				bw.append(&quot;##&quot; + &quot;\n&quot;);</b>
+<i>77</i>&nbsp;			}
+<b class="nc"><i>78</i>&nbsp;		} catch (IOException e) {</b>
+<b class="nc"><i>79</i>&nbsp;			e.printStackTrace();</b>
+<i>80</i>&nbsp;		}
+<i>81</i>&nbsp;		finally{
+<b class="nc"><i>82</i>&nbsp;			try {</b>
+<b class="fc"><i>83</i>&nbsp;				bw.close();</b>
+<b class="nc"><i>84</i>&nbsp;			} catch (IOException e) {</b>
+<i>85</i>&nbsp;				// TODO: handle exception
+<b class="fc"><i>86</i>&nbsp;			}</b>
+<b class="nc"><i>87</i>&nbsp;		}</b>
+<b class="fc"><i>88</i>&nbsp;	}</b>
+<i>89</i>&nbsp;
+<i>90</i>&nbsp;	public void loadIntrebariFromFile(String f) throws InputValidationFailedException {
+<b class="fc"><i>91</i>&nbsp;		repository.setIntrebari(repository.loadIntrebariFromFile(f));</b>
+<b class="fc"><i>92</i>&nbsp;	}</b>
+<i>93</i>&nbsp;	
+<i>94</i>&nbsp;	public Statistica getStatistica() throws NotAbleToCreateStatisticsException{
+<i>95</i>&nbsp;		
+<b class="nc"><i>96</i>&nbsp;		if(repository.getIntrebari().isEmpty())</b>
+<b class="nc"><i>97</i>&nbsp;			throw new NotAbleToCreateStatisticsException(&quot;Repository-ul nu contine nicio intrebare!&quot;);</b>
+<i>98</i>&nbsp;		
+<b class="nc"><i>99</i>&nbsp;		Statistica statistica = new Statistica();</b>
+<b class="nc"><i>100</i>&nbsp;		for(Domeniu domeniu : repository.getDistinctDomains()){</b>
+<b class="nc"><i>101</i>&nbsp;			statistica.add(domeniu, repository.getNumberOfIntrebariByDomain(domeniu));</b>
+<b class="nc"><i>102</i>&nbsp;		}</b>
+<i>103</i>&nbsp;		
+<b class="nc"><i>104</i>&nbsp;		return statistica;</b>
+<i>105</i>&nbsp;	}
+<i>106</i>&nbsp;
+<i>107</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-04-25 12:15</div>
+</div>
+</body>
+</html>

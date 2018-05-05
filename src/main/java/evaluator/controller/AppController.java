@@ -97,7 +97,7 @@ public class AppController {
 			throw new NotAbleToCreateStatisticsException("Repository-ul nu contine nicio intrebare!");
 		
 		Statistica statistica = new Statistica();
-		for(Domeniu domeniu : repository.getDistinctDomains()){
+		for(Domeniu domeniu : Domeniu.values()){
 			statistica.add(domeniu, repository.getNumberOfIntrebariByDomain(domeniu));
 		}
 		

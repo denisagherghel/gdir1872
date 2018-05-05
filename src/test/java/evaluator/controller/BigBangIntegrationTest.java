@@ -81,4 +81,12 @@ public class BigBangIntegrationTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void BigBang() {
+        unitTestA_addNewIntrebare();
+        unitTestB_createNewTest();
+        unitTestC_getStatistica();
+        integrationTest_BigBang();
+    }
 }

@@ -81,4 +81,10 @@ public class TopDownIntegrationTest {
         }
     }
 
+    @Test
+    public void TopDown() {
+        unitTestA_addNewIntrebare();
+        integrationTestPAB();
+        integrationTestPABC();
+    }
 }

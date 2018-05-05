@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db46a182-42f1-4039-aa1c-3392a410aaa5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integration_tc_bigbang.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integration_tc_topdown_PAB.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/integration_tc_topdown_PABC.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intrebari.txt" beforeDir="false" afterPath="$PROJECT_DIR$/intrebari.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/evaluator/main/StartUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/evaluator/main/StartUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/evaluator/main/StartUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/evaluator/main/StartUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -84,8 +76,8 @@
       <file leaf-file-name="TopDownIntegrationTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-286">
-              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            <state relative-caret-position="394">
+              <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,6 +90,27 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppControllerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/AppControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="117" column="44" lean-forward="true" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateNewTestTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/CreateNewTestTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-153">
+              <caret line="57" column="41" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,20 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intrebari.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intrebari.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BigBangIntegrationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="76" lean-forward="true" selection-start-line="74" selection-start-column="12" selection-end-line="76" />
+            <state relative-caret-position="394">
+              <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,21 +152,6 @@
               <caret line="49" column="29" lean-forward="true" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/evaluator/main/StartUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
-              <folding>
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1050#1051#0" expanded="true" />
-                <element signature="e#1056#1057#0" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,6 +177,7 @@
       <find>reposit</find>
       <find>reposi</find>
       <find>loadintre</find>
+      <find>bva</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -225,9 +215,9 @@
         <option value="$PROJECT_DIR$/integration_tc_bigbang.txt" />
         <option value="$PROJECT_DIR$/intrebari.txt" />
         <option value="$PROJECT_DIR$/src/main/java/evaluator/main/StartUI.java" />
-        <option value="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" />
         <option value="$PROJECT_DIR$/integration_tc_topdown_PAB.txt" />
         <option value="$PROJECT_DIR$/integration_tc_topdown_PABC.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java" />
       </list>
     </option>
@@ -383,7 +373,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TopDownIntegrationTest">
+  <component name="RunManager" selected="JUnit.TopDownIntegrationTest.TopDown">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -427,30 +417,6 @@
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
     </configuration>
-    <configuration name="AppControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProiectEvaluatorExamen" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="evaluator.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="recording" autostart="true" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="evaluator.controller" />
-      <option name="MAIN_CLASS_NAME" value="evaluator.controller.AppControllerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="BigBangIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProiectEvaluatorExamen" />
       <extension name="coverage">
@@ -466,6 +432,30 @@
       <option name="MAIN_CLASS_NAME" value="evaluator.controller.BigBangIntegrationTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BigBangIntegrationTest.BigBang" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProiectEvaluatorExamen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="evaluator.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="true" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="evaluator.controller" />
+      <option name="MAIN_CLASS_NAME" value="evaluator.controller.BigBangIntegrationTest" />
+      <option name="METHOD_NAME" value="BigBang" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -499,30 +489,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="GetStatisticaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ProiectEvaluatorExamen" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="evaluator.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="recording" autostart="true" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="evaluator.controller" />
-      <option name="MAIN_CLASS_NAME" value="evaluator.controller.GetStatisticaTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="TopDownIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProiectEvaluatorExamen" />
       <extension name="coverage">
@@ -538,6 +504,30 @@
       <option name="MAIN_CLASS_NAME" value="evaluator.controller.TopDownIntegrationTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TopDownIntegrationTest.TopDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProiectEvaluatorExamen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="evaluator.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="true" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="evaluator.controller" />
+      <option name="MAIN_CLASS_NAME" value="evaluator.controller.TopDownIntegrationTest" />
+      <option name="METHOD_NAME" value="TopDown" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -876,19 +866,19 @@
       <envs />
     </configuration>
     <list>
-      <item itemvalue="JUnit.GetStatisticaTest" />
       <item itemvalue="JUnit.BigBangIntegrationTest" />
-      <item itemvalue="JUnit.AppControllerTest" />
       <item itemvalue="JUnit.BigBangIntegrationTest.integrationTest_BigBang" />
       <item itemvalue="JUnit.TopDownIntegrationTest" />
+      <item itemvalue="JUnit.BigBangIntegrationTest.BigBang" />
+      <item itemvalue="JUnit.TopDownIntegrationTest.TopDown" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TopDownIntegrationTest.TopDown" />
+        <item itemvalue="JUnit.BigBangIntegrationTest.BigBang" />
         <item itemvalue="JUnit.TopDownIntegrationTest" />
         <item itemvalue="JUnit.BigBangIntegrationTest.integrationTest_BigBang" />
         <item itemvalue="JUnit.BigBangIntegrationTest" />
-        <item itemvalue="JUnit.AppControllerTest" />
-        <item itemvalue="JUnit.GetStatisticaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -918,20 +908,11 @@
       <workItem from="1524489365297" duration="654000" />
       <workItem from="1524646666949" duration="1136000" />
       <workItem from="1525452587146" duration="594000" />
-      <workItem from="1525519645770" duration="9374000" />
+      <workItem from="1525519645770" duration="12697000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BigBangIntegrationTest_integrationTest_BigBang - 2018.05.05 at 19h 02m 55s.xml">
-      <configuration name="BigBangIntegrationTest.integrationTest_BigBang" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BigBangIntegrationTest_integrationTest_BigBang - 2018.05.05 at 19h 03m 03s.xml">
-      <configuration name="BigBangIntegrationTest.integrationTest_BigBang" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BigBangIntegrationTest_integrationTest_BigBang - 2018.05.05 at 19h 03m 18s.xml">
-      <configuration name="BigBangIntegrationTest.integrationTest_BigBang" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BigBangIntegrationTest_integrationTest_BigBang - 2018.05.05 at 19h 03m 22s.xml">
       <configuration name="BigBangIntegrationTest.integrationTest_BigBang" configurationId="JUnit" />
     </history-entry>
@@ -953,9 +934,18 @@
     <history-entry file="TopDownIntegrationTest - 2018.05.05 at 19h 27m 27s.xml">
       <configuration name="TopDownIntegrationTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TopDownIntegrationTest - 2018.05.05 at 19h 29m 14s.xml">
+      <configuration name="TopDownIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TopDownIntegrationTest - 2018.05.05 at 19h 29m 18s.xml">
+      <configuration name="TopDownIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BigBangIntegrationTest_BigBang - 2018.05.05 at 21h 35m 37s.xml">
+      <configuration name="BigBangIntegrationTest.BigBang" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64447000" />
+    <option name="totallyTimeSpent" value="67770000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -980,11 +970,11 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49749058" visible="true" weight="0.34525448" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749058" visible="true" weight="0.34525448" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22005208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22005208" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1015,12 +1005,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/evaluator/repository/Repository.java</url>
+          <url />
           <line>93</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/evaluator/repository/Repository.java</url>
+          <url />
           <line>103</line>
           <properties />
           <option name="timeStamp" value="1" />
@@ -1274,7 +1264,7 @@
             <Category>Constructors</Category>
             <Category>Methods</Category>
             <Category>Properties</Category>
-            <Category>Inner Classes</Category>
+            <Category />
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
@@ -1496,23 +1486,6 @@
     <entry file="file://$PROJECT_DIR$/intrebari_tcs_02.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/CreateNewTestTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/AppControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="88" column="9" lean-forward="true" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/evaluator/repository/Repository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1594,16 +1567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="76" lean-forward="true" selection-start-line="74" selection-start-column="12" selection-end-line="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/GetStatisticaTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -1614,10 +1577,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/CreateNewTestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/AppControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="117" column="44" lean-forward="true" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-286">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        <state relative-caret-position="394">
+          <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

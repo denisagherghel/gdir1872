@@ -124,3 +124,10 @@ dșslma?
 3
 OOP
 ##
+Ce este oop?
+1)ceva
+2)altceva
+3)cu totul altceva
+1
+AI
+##

@@ -7,10 +7,12 @@ import java.io.InputStreamReader;
 import evaluator.exception.DuplicateIntrebareException;
 import evaluator.exception.InputValidationFailedException;
 import evaluator.exception.NotAbleToCreateTestException;
+import evaluator.model.Intrebare;
 import evaluator.model.Statistica;
 
 import evaluator.controller.AppController;
 import evaluator.exception.NotAbleToCreateStatisticsException;
+import evaluator.model.Test;
 
 //functionalitati
 //i.	 adaugarea unei noi intrebari pentru un anumit domeniu (enunt intrebare, raspuns 1, raspuns 2, raspuns 3, raspunsul corect, domeniul) in setul de intrebari disponibile;
@@ -18,17 +20,33 @@ import evaluator.exception.NotAbleToCreateStatisticsException;
 //iii.	 afisarea unei statistici cu numarul de intrebari organizate pe domenii.
 
 public class StartUI {
-
 	private static final String file = "intrebari.txt";
-	
-	public static void main(String[] args) throws IOException {
+	private static String optiune;
+	private static boolean activ;
+
+	public static Intrebare newIntrebare;
+	public static Exception intrebareException;
+    public static Test newTest;
+    public static Exception testException;
+    public static Statistica statistica;
+    public static Exception statisticaException;
+
+    public static void setActiv(boolean activ) {
+        StartUI.activ = activ;
+    }
+
+    public static void setOptiune(String optiune) {
+        StartUI.optiune = optiune;
+    }
+
+    public static void main(String[] args) throws IOException {
 		
 		BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 		
 		AppController appController = new AppController();
 		
-		boolean activ = true;
-		String optiune = null;
+		activ = true;
+		optiune = null;
 
 		try {
 			appController.loadIntrebariFromFile(file);
@@ -37,7 +55,6 @@ public class StartUI {
 		}
 
 		while(activ){
-			
 			System.out.println("");
 			System.out.println("1.Adauga intrebare");
 			System.out.println("2.Creeaza test");
@@ -63,27 +80,36 @@ public class StartUI {
 				String domeniul = console.readLine();
 
 				try {
-					appController.addNewIntrebare(enunt, varianta1, varianta2, varianta3, variantaCorecta, domeniul);
+                    intrebareException = null;
+				    newIntrebare = null;
+					newIntrebare = appController.addNewIntrebare(enunt, varianta1, varianta2, varianta3, variantaCorecta, domeniul);
 				} catch (DuplicateIntrebareException e) {
 					System.out.println(e.getMessage());
+					intrebareException = e;
 				} catch (InputValidationFailedException e) {
 					System.out.println(e.getMessage());
+					intrebareException = e;
 				}
 				break;
 
 			case "2" :
 				try {
-					appController.createNewTest();
+				    testException = null;
+				    newTest = null;
+					newTest = appController.createNewTest();
 				} catch (NotAbleToCreateTestException e) {
 					System.out.println(e.getMessage());
+					testException = e;
 				}
 				break;
 			case "3" :
-				Statistica statistica;
 				try {
+				    statisticaException = null;
+				    statistica = null;
 					statistica = appController.getStatistica();
 					System.out.println(statistica);
 				} catch (NotAbleToCreateStatisticsException e) {
+				    statisticaException = e;
 					System.out.println(e.getMessage());
 				}
 				

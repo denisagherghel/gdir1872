@@ -1,0 +1,9 @@
+1
+Ce este oop?
+1)ceva
+24)altceva
+3)cu totul altceva
+1
+AI
+2
+4

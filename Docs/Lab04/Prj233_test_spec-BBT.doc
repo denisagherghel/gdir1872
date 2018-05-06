@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>testspec Prj233 - gdir1872_BBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Prj233<br>Test Suite: Prj233 - gdir1872_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 06/05/2018</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><b><p style="padding-left: 20px;"><a href="#toc_1">1. gdir1872_BBT</a></p></b>
+<p style="padding-left: 45px;"><a href="#toc_tc16728">Prj233-72: TC1_EC_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc16730">Prj233-73: TC7_EC_Invalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc16732">Prj233-74: TC11_BVA_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc16734">Prj233-75: TC18_BVA_Invalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc23311">Prj233-178: TC_BVA_Valid</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>
+	Project for group 233.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1. Test Suite : gdir1872_BBT</h1>
+<a name="toc_tc16728"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj233-72: TC1_EC_Valid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">gdir1872</td></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><p>
+	Se adauga o intrebare noua cu toate datele corecte:</p>
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+	<tbody>
+		<tr>
+			<td>
+				enunt</td>
+			<td>
+				varianta1</td>
+			<td>
+				varianta2</td>
+			<td>
+				varianta3</td>
+			<td>
+				variantaCorecta</td>
+			<td>
+				domeniu</td>
+		</tr>
+		<tr>
+			<td>
+				&quot;Ce este OOP?&quot;</td>
+			<td>
+				&quot;1)dlja&quot;</td>
+			<td>
+				&quot;2)ldlasn&quot;</td>
+			<td>
+				&quot;3)kdnsa&quot;</td>
+			<td>
+				&quot;1&quot;</td>
+			<td>
+				&quot;OOP&quot;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td colspan="3"><span class="label">Preconditions:</span><br /><div>
+	-enunt is String</div>
+<div>
+	-varianta1 is String</div>
+<div>
+	-variantaCorecta is String</div>
+<div>
+	-domeniu is String</div>
+<div>
+	-len(enunt) = le &isin; [1, 100]</div>
+<div>
+	-lastChar(enunt) = lce = &#39;?&#39;</div>
+<div>
+	-len(varianta1) = lv1 &isin; [1, 50]</div>
+<div>
+	-firstChar(varianta1) = fcv1 = &#39;1&#39;</div>
+<div>
+	-secondChar(varianta1) = scv1 = &#39;)&#39;</div>
+<div>
+	-variantaCorecta &isin; {&#39;1&#39;,&#39;2&#39;,&#39;3&#39;}</div>
+<div>
+	-&quot;domeniu &isin; {&#39;OOP&#39;,&#39;AI&#39;,&#39;SistemeDeOperare&#39;, &#39;BazeDeDate&#39;, &#39;ProgramareWeb&#39;}&quot;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >evaluator.controller.AppControllerTest#addNewIntrebare_validInput</td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" >evaluator.controller.AppControllerTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">gdir1872_Req01:  Lab02<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc16730"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj233-73: TC7_EC_Invalid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">gdir1872</td></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><p>
+	Se adauga o intrebare noua cu toate datele corecte inafara de varianta 1:</p>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+	<tbody>
+		<tr>
+			<td>
+				enunt</td>
+			<td>
+				varianta1</td>
+			<td>
+				varianta2</td>
+			<td>
+				varianta3</td>
+			<td>
+				variantaCorecta</td>
+			<td>
+				domeniu</td>
+		</tr>
+		<tr>
+			<td>
+				&quot;Ce este OOP?&quot;</td>
+			<td>
+				&quot;x)dlja&quot;</td>
+			<td>
+				&quot;2)ldlasn&quot;</td>
+			<td>
+				&quot;3)kdnsa&quot;</td>
+			<td>
+				&quot;1&quot;</td>
+			<td>
+				&quot;OOP&quot;<br />
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td colspan="3"><span class="label">Preconditions:</span><br /><div>
+	-enunt is String</div>
+<div>
+	-varianta1 is String</div>
+<div>
+	-variantaCorecta is String</div>
+<div>
+	-domeniu is String</div>
+<div>
+	-len(enunt) = le &isin; [1, 100]</div>
+<div>
+	-lastChar(enunt) = lce = &#39;?&#39;</div>
+<div>
+	-len(varianta1) = lv1 &isin; [1, 50]</div>
+<div>
+	-firstChar(varianta1) = fcv1 = &#39;1&#39;</div>
+<div>
+	-secondChar(varianta1) = scv1 = &#39;)&#39;</div>
+<div>
+	-variantaCorecta &isin; {&#39;1&#39;,&#39;2&#39;,&#39;3&#39;}</div>
+<div>
+	-&quot;domeniu &isin; {&#39;OOP&#39;,&#39;AI&#39;,&#39;SistemeDeOperare&#39;, &#39;BazeDeDate&#39;, &#39;ProgramareWeb&#39;}&quot;</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >evaluator.controller.AppControllerTest#addNewIntrebare_invalidFormatForVarianta1</td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" >evaluator.controller.AppControllerTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">gdir1872_Req01:  Lab02<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc16732"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj233-74: TC11_BVA_Valid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">gdir1872</td></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><p>
+	Se testeaza pentru lungimea minima pe care o poate avea enuntul unei intrebari (5), care ar trebui sa mearga:</p>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+	<tbody>
+		<tr>
+			<td>
+				enunt</td>
+			<td>
+				varianta1</td>
+			<td>
+				varianta2</td>
+			<td>
+				varianta3</td>
+			<td>
+				variantaCorecta</td>
+			<td>
+				domeniu</td>
+		</tr>
+		<tr>
+			<td>
+				&quot;Mmmm?&quot;</td>
+			<td>
+				&quot;x)dlja&quot;</td>
+			<td>
+				&quot;2)ldlasn&quot;</td>
+			<td>
+				&quot;3)kdnsa&quot;</td>
+			<td>
+				&quot;1&quot;</td>
+			<td>
+				&quot;OOP&quot;<br />
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<body id="cke_pastebin" style="position: absolute; top: 12px; width: 1px; height: 1px; overflow: hidden; left: -1000px;">
+	<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+		<tbody>
+			<tr>
+				<td>
+					enunt</td>
+				<td>
+					varianta1</td>
+				<td>
+					varianta2</td>
+				<td>
+					varianta3</td>
+				<td>
+					variantaCorecta</td>
+				<td>
+					domeniu</td>
+			</tr>
+			<tr>
+				<td>
+					&quot;Ce este OOP?&quot;</td>
+				<td>
+					&quot;x)dlja&quot;</td>
+				<td>
+					&quot;2)ldlasn&quot;</td>
+				<td>
+					&quot;3)kdnsa&quot;</td>
+				<td>
+					&quot;1&quot;</td>
+				<td>
+					&quot;OOP&quot;<br />
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td colspan="3"><span class="label">Preconditions:</span><br /><div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" ></td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">gdir1872_Req01:  Lab02<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc16734"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj233-75: TC18_BVA_Invalid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">gdir1872</td></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><p>
+	Se testeaza pentru o lungime mai mica decat lungimea minima pe care o poate avea varianta 1:</p>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+	<tbody>
+		<tr>
+			<td>
+				enunt</td>
+			<td>
+				varianta1</td>
+			<td>
+				varianta2</td>
+			<td>
+				varianta3</td>
+			<td>
+				variantaCorecta</td>
+			<td>
+				domeniu</td>
+		</tr>
+		<tr>
+			<td>
+				&quot;mmm?&quot;</td>
+			<td>
+				&quot;1)&quot;</td>
+			<td>
+				&quot;2)ldlasn&quot;</td>
+			<td>
+				&quot;3)kdnsa&quot;</td>
+			<td>
+				&quot;1&quot;</td>
+			<td>
+				&quot;OOP&quot;<br />
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >evaluator.controller.AppControllerTest#addNewIntrebare_BVA_minNotAcceptedValueForVarianta1</td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" >evaluator.controller.AppControllerTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">gdir1872_Req01:  Lab02<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc23311"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj233-178: TC_BVA_Valid</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="2">gdir1872</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr><tr><td > name of the test method:</td><td  colspan = "2" >evaluator.controller.AppControllerTest#addNewIntrebare_BVA_minAcceptedValueForVarianta1</td></tr>
+<tr><td > name of the autotest class:</td><td  colspan = "2" >evaluator.controller.AppControllerTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="2">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="2">&nbsp;None<br></td></tr>
+</table>
+</div>
+
+</body>
+</html>

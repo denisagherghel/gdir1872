@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db46a182-42f1-4039-aa1c-3392a410aaa5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="db46a182-42f1-4039-aa1c-3392a410aaa5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,8 +73,8 @@
       <file leaf-file-name="TopDownIntegrationTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+            <state relative-caret-position="492">
+              <caret line="84" column="23" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,8 +133,8 @@
       <file leaf-file-name="BigBangIntegrationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+            <state relative-caret-position="326">
+              <caret line="85" column="23" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,8 +214,8 @@
         <option value="$PROJECT_DIR$/src/main/java/evaluator/main/StartUI.java" />
         <option value="$PROJECT_DIR$/integration_tc_topdown_PAB.txt" />
         <option value="$PROJECT_DIR$/integration_tc_topdown_PABC.txt" />
-        <option value="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java" />
       </list>
     </option>
   </component>
@@ -908,14 +905,11 @@
       <workItem from="1524489365297" duration="654000" />
       <workItem from="1524646666949" duration="1136000" />
       <workItem from="1525452587146" duration="594000" />
-      <workItem from="1525519645770" duration="12697000" />
+      <workItem from="1525519645770" duration="13446000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BigBangIntegrationTest_integrationTest_BigBang - 2018.05.05 at 19h 03m 22s.xml">
-      <configuration name="BigBangIntegrationTest.integrationTest_BigBang" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BigBangIntegrationTest_integrationTest_BigBang - 2018.05.05 at 19h 20m 06s.xml">
       <configuration name="BigBangIntegrationTest.integrationTest_BigBang" configurationId="JUnit" />
     </history-entry>
@@ -943,9 +937,12 @@
     <history-entry file="BigBangIntegrationTest_BigBang - 2018.05.05 at 21h 35m 37s.xml">
       <configuration name="BigBangIntegrationTest.BigBang" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TopDownIntegrationTest_TopDown - 2018.05.05 at 21h 36m 07s.xml">
+      <configuration name="TopDownIntegrationTest.TopDown" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67770000" />
+    <option name="totallyTimeSpent" value="68519000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -958,7 +955,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -970,7 +966,7 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749058" visible="true" weight="0.34525448" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49749058" weight="0.34525448" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -1005,12 +1001,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url />
+          <url>file://$PROJECT_DIR$/src/main/java/evaluator/repository/Repository.java</url>
           <line>93</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url />
+          <url>file://$PROJECT_DIR$/src/main/java/evaluator/repository/Repository.java</url>
           <line>103</line>
           <properties />
           <option name="timeStamp" value="1" />
@@ -1264,7 +1260,7 @@
             <Category>Constructors</Category>
             <Category>Methods</Category>
             <Category>Properties</Category>
-            <Category />
+            <Category>Inner Classes</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
@@ -1596,8 +1592,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/BigBangIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+        <state relative-caret-position="326">
+          <caret line="85" column="23" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1606,8 +1602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/evaluator/controller/TopDownIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+        <state relative-caret-position="492">
+          <caret line="84" column="23" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
